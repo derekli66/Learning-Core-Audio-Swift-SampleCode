@@ -8,7 +8,7 @@ I wish I could learn more about unsafe Swift and also audio programming at the s
 
 If you happen to learn Core Audio as well as using this book, you may want to see the Swift version sample code. Hope this repo will help you.
 
-If you would like to share your Swift knowledge to make these sample code better, please send me PR. I will be happy to see it and learn from it.  
+If you would like to share your Swift knowledge to make these sample code better, please send me PR. I will be happy to learn from it.  
  
 ---
 
