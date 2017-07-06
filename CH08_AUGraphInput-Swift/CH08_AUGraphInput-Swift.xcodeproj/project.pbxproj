@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7131E5B31ECA432A00158CCE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7131E5B21ECA432A00158CCE /* main.swift */; };
+		7131E5BA1ECA43F500158CCE /* OSStatus_ErrorCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7131E5B91ECA43F500158CCE /* OSStatus_ErrorCheck.swift */; };
+		713EC28F1EE33B9F00F0B392 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713EC28E1EE33B9F00F0B392 /* CoreAudio.framework */; };
+		713EC2911EE33BAA00F0B392 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713EC2901EE33BAA00F0B392 /* AudioUnit.framework */; };
+		713EC2931EE33BB100F0B392 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713EC2921EE33BB100F0B392 /* ApplicationServices.framework */; };
+		719E6A1E1ECA4A02002E58B4 /* CARingBuffer_Wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 719E6A1C1ECA4A02002E58B4 /* CARingBuffer_Wrapper.cpp */; };
+		719E6AC11ECA4CCA002E58B4 /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 719E6ABF1ECA4CCA002E58B4 /* CARingBuffer.cpp */; };
+		719E6AC51ECA5F21002E58B4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E6AC41ECA5F21002E58B4 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7131E5AD1ECA432A00158CCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7131E5AF1ECA432A00158CCE /* CH08_AUGraphInput-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CH08_AUGraphInput-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131E5B21ECA432A00158CCE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7131E5B91ECA43F500158CCE /* OSStatus_ErrorCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSStatus_ErrorCheck.swift; sourceTree = "<group>"; };
+		713EC28E1EE33B9F00F0B392 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		713EC2901EE33BAA00F0B392 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		713EC2921EE33BB100F0B392 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		719E6A161ECA4556002E58B4 /* CH08-AUGraphInput-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CH08-AUGraphInput-Bridging-Header.h"; sourceTree = "<group>"; };
+		719E6A1C1ECA4A02002E58B4 /* CARingBuffer_Wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer_Wrapper.cpp; sourceTree = "<group>"; };
+		719E6A1D1ECA4A02002E58B4 /* CARingBuffer_Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARingBuffer_Wrapper.h; sourceTree = "<group>"; };
+		719E6ABF1ECA4CCA002E58B4 /* CARingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CARingBuffer.cpp; path = ../../../../../Library/Developer/CoreAudio/PublicUtility/CARingBuffer.cpp; sourceTree = "<group>"; };
+		719E6AC01ECA4CCA002E58B4 /* CARingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CARingBuffer.h; path = ../../../../../Library/Developer/CoreAudio/PublicUtility/CARingBuffer.h; sourceTree = "<group>"; };
+		719E6AC41ECA5F21002E58B4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7131E5AC1ECA432A00158CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713EC2931EE33BB100F0B392 /* ApplicationServices.framework in Frameworks */,
+				713EC2911EE33BAA00F0B392 /* AudioUnit.framework in Frameworks */,
+				713EC28F1EE33B9F00F0B392 /* CoreAudio.framework in Frameworks */,
+				719E6AC51ECA5F21002E58B4 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7131E5A61ECA432A00158CCE = {
+			isa = PBXGroup;
+			children = (
+				719E6ABE1ECA4C9D002E58B4 /* CA Public Utility */,
+				7131E5B11ECA432A00158CCE /* CH08-AUGraphInput */,
+				7131E5B01ECA432A00158CCE /* Products */,
+				719E6AC31ECA5F21002E58B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7131E5B01ECA432A00158CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7131E5AF1ECA432A00158CCE /* CH08_AUGraphInput-Swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7131E5B11ECA432A00158CCE /* CH08-AUGraphInput */ = {
+			isa = PBXGroup;
+			children = (
+				7131E5B91ECA43F500158CCE /* OSStatus_ErrorCheck.swift */,
+				7131E5B21ECA432A00158CCE /* main.swift */,
+				719E6A1C1ECA4A02002E58B4 /* CARingBuffer_Wrapper.cpp */,
+				719E6A1D1ECA4A02002E58B4 /* CARingBuffer_Wrapper.h */,
+				719E6A161ECA4556002E58B4 /* CH08-AUGraphInput-Bridging-Header.h */,
+			);
+			path = "CH08-AUGraphInput";
+			sourceTree = "<group>";
+		};
+		719E6ABE1ECA4C9D002E58B4 /* CA Public Utility */ = {
+			isa = PBXGroup;
+			children = (
+				719E6ABF1ECA4CCA002E58B4 /* CARingBuffer.cpp */,
+				719E6AC01ECA4CCA002E58B4 /* CARingBuffer.h */,
+			);
+			name = "CA Public Utility";
+			sourceTree = "<group>";
+		};
+		719E6AC31ECA5F21002E58B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				713EC2921EE33BB100F0B392 /* ApplicationServices.framework */,
+				713EC2901EE33BAA00F0B392 /* AudioUnit.framework */,
+				713EC28E1EE33B9F00F0B392 /* CoreAudio.framework */,
+				719E6AC41ECA5F21002E58B4 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7131E5AE1ECA432A00158CCE /* CH08_AUGraphInput-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7131E5B61ECA432A00158CCE /* Build configuration list for PBXNativeTarget "CH08_AUGraphInput-Swift" */;
+			buildPhases = (
+				7131E5AB1ECA432A00158CCE /* Sources */,
+				7131E5AC1ECA432A00158CCE /* Frameworks */,
+				7131E5AD1ECA432A00158CCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CH08_AUGraphInput-Swift";
+			productName = "CH08-AUGraphInput";
+			productReference = 7131E5AF1ECA432A00158CCE /* CH08_AUGraphInput-Swift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7131E5A71ECA432A00158CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = derekli66;
+				TargetAttributes = {
+					7131E5AE1ECA432A00158CCE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 453FTGY3Z2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7131E5AA1ECA432A00158CCE /* Build configuration list for PBXProject "CH08_AUGraphInput-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7131E5A61ECA432A00158CCE;
+			productRefGroup = 7131E5B01ECA432A00158CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7131E5AE1ECA432A00158CCE /* CH08_AUGraphInput-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7131E5AB1ECA432A00158CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719E6A1E1ECA4A02002E58B4 /* CARingBuffer_Wrapper.cpp in Sources */,
+				7131E5B31ECA432A00158CCE /* main.swift in Sources */,
+				7131E5BA1ECA43F500158CCE /* OSStatus_ErrorCheck.swift in Sources */,
+				719E6AC11ECA4CCA002E58B4 /* CARingBuffer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7131E5B41ECA432A00158CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7131E5B51ECA432A00158CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+			};
+			name = Release;
+		};
+		7131E5B71ECA432A00158CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 453FTGY3Z2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PART_II;
+				SWIFT_OBJC_BRIDGING_HEADER = "CH08-AUGraphInput/CH08-AUGraphInput-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7131E5B81ECA432A00158CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 453FTGY3Z2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PART_II;
+				SWIFT_OBJC_BRIDGING_HEADER = "CH08-AUGraphInput/CH08-AUGraphInput-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7131E5AA1ECA432A00158CCE /* Build configuration list for PBXProject "CH08_AUGraphInput-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131E5B41ECA432A00158CCE /* Debug */,
+				7131E5B51ECA432A00158CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7131E5B61ECA432A00158CCE /* Build configuration list for PBXNativeTarget "CH08_AUGraphInput-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131E5B71ECA432A00158CCE /* Debug */,
+				7131E5B81ECA432A00158CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7131E5A71ECA432A00158CCE /* Project object */;
+}
