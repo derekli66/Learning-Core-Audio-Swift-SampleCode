@@ -6,7 +6,7 @@ Practice is the best way to learn something you are not familiar with. Therefore
 
 I wish I could learn more about unsafe Swift and also audio programming at the same time in this practice. 
 
-If you happen to learn Core Audio and also using this book, you may want to see the Swift version sample code. Hope this repo will help you.
+If you happen to learn Core Audio as well as using this book, you may want to see the Swift version sample code. Hope this repo will help you.
 
 If you would like to share your Swift knowledge to make these sample code better, please send me PR. I will be happy to see it and learn from it.  
  
