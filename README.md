@@ -12,7 +12,7 @@ If you would like to share your Swift knowledge to make these sample code better
  
 ---
 
-The chapters I finished in Swift.
+The chapters I finished in Swift 3.
 
 * Chapter 5
 * Chapter 6
