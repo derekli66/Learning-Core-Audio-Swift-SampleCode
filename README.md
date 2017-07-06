@@ -1,6 +1,5 @@
 # Learning-Core-Audio-Swift-SampleCode
 
----
 This repo is my practice for learning Apple Core Audio API. Thanks **Chris Adamson** and **Kevin Avila** two authors they created the book, **Learn Core Audio: A Hands-On Guide to Audio Programming for Mac and iOS**. This book let me have a gentle guide to walk through the basic of audio programming. 
 
 Practice is the best way to learn something you are not familiar with. Therefore, I decided to use Swift to do practices on the original sample codes which were written in C/Objective-C.
