@@ -14,12 +14,13 @@ If you would like to share your Swift knowledge to make these sample code better
 
 The chapters I finished in Swift 3.
 
-* Chapter 3
-* Chapter 5
-* Chapter 6
-* Chapter 7
-* Chapter 8
-* Chapter 10
-* Chapter 11
+* Chapter 3 - Audio Processing with Core Audio
+* Chapter 4 - Recording
+* Chapter 5 - Playback
+* Chapter 6 - Conversion
+* Chapter 7 - Audio Units: Generators, Effects, and Rendering
+* Chapter 8 - Audio Units: Input and Mixing
+* Chapter 10 - Core Audio on iOS
+* Chapter 11 - Core MIDI
 
 ---
