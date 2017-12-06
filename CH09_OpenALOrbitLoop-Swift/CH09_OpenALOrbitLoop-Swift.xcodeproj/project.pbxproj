@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71EB76D31F47587E004F760C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB76D21F47587E004F760C /* main.swift */; };
+		71EB76DA1F4758D7004F760C /* OSStatus_ErrorCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB76D91F4758D7004F760C /* OSStatus_ErrorCheck.swift */; };
+		71EB76DD1F4758E6004F760C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EB76DC1F4758E6004F760C /* OpenAL.framework */; };
+		71EB76DF1F4758EF004F760C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EB76DE1F4758EF004F760C /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71EB76CD1F47587E004F760C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		71EB76CF1F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CH09_OpenALOrbitLoop-Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71EB76D21F47587E004F760C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		71EB76D91F4758D7004F760C /* OSStatus_ErrorCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSStatus_ErrorCheck.swift; sourceTree = "<group>"; };
+		71EB76DC1F4758E6004F760C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		71EB76DE1F4758EF004F760C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71EB76CC1F47587E004F760C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71EB76DF1F4758EF004F760C /* AudioToolbox.framework in Frameworks */,
+				71EB76DD1F4758E6004F760C /* OpenAL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71EB76C61F47587E004F760C = {
+			isa = PBXGroup;
+			children = (
+				71EB76D11F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */,
+				71EB76D01F47587E004F760C /* Products */,
+				71EB76DB1F4758E6004F760C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		71EB76D01F47587E004F760C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71EB76CF1F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71EB76D11F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				71EB76D91F4758D7004F760C /* OSStatus_ErrorCheck.swift */,
+				71EB76D21F47587E004F760C /* main.swift */,
+			);
+			path = "CH09_OpenALOrbitLoop-Swift";
+			sourceTree = "<group>";
+		};
+		71EB76DB1F4758E6004F760C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71EB76DE1F4758EF004F760C /* AudioToolbox.framework */,
+				71EB76DC1F4758E6004F760C /* OpenAL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71EB76CE1F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71EB76D61F47587E004F760C /* Build configuration list for PBXNativeTarget "CH09_OpenALOrbitLoop-Swift" */;
+			buildPhases = (
+				71EB76CB1F47587E004F760C /* Sources */,
+				71EB76CC1F47587E004F760C /* Frameworks */,
+				71EB76CD1F47587E004F760C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CH09_OpenALOrbitLoop-Swift";
+			productName = "CH09_OpenALOrbitLoop-Swift";
+			productReference = 71EB76CF1F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71EB76C71F47587E004F760C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = derekli66;
+				TargetAttributes = {
+					71EB76CE1F47587E004F760C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SKLFZ4533Y;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 71EB76CA1F47587E004F760C /* Build configuration list for PBXProject "CH09_OpenALOrbitLoop-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 71EB76C61F47587E004F760C;
+			productRefGroup = 71EB76D01F47587E004F760C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71EB76CE1F47587E004F760C /* CH09_OpenALOrbitLoop-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71EB76CB1F47587E004F760C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71EB76D31F47587E004F760C /* main.swift in Sources */,
+				71EB76DA1F4758D7004F760C /* OSStatus_ErrorCheck.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		71EB76D41F47587E004F760C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71EB76D51F47587E004F760C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		71EB76D71F47587E004F760C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SKLFZ4533Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		71EB76D81F47587E004F760C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SKLFZ4533Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71EB76CA1F47587E004F760C /* Build configuration list for PBXProject "CH09_OpenALOrbitLoop-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71EB76D41F47587E004F760C /* Debug */,
+				71EB76D51F47587E004F760C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71EB76D61F47587E004F760C /* Build configuration list for PBXNativeTarget "CH09_OpenALOrbitLoop-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71EB76D71F47587E004F760C /* Debug */,
+				71EB76D81F47587E004F760C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71EB76C71F47587E004F760C /* Project object */;
+}
