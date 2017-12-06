@@ -20,6 +20,7 @@ The chapters were finished in Swift 3.
 * Chapter 6 - Conversion
 * Chapter 7 - Audio Units: Generators, Effects, and Rendering
 * Chapter 8 - Audio Units: Input and Mixing
+* Chpater 9 - Positional Sound
 * Chapter 10 - Core Audio on iOS
 * Chapter 11 - Core MIDI
 
