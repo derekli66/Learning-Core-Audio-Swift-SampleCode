@@ -23,5 +23,6 @@ The chapters were finished in Swift 3.
 * Chpater 9 - Positional Sound
 * Chapter 10 - Core Audio on iOS
 * Chapter 11 - Core MIDI
+* Chapter 12 - Coda (AUSampler)
 
 ---
