@@ -159,7 +159,7 @@ func Convert(_ mySettings: inout MyAudioConverterSettings)
     }
     
     AudioConverterDispose(audioConverter)
-    outputBuffer.deallocate(capacity: MemoryLayout<UInt8>.size * Int(outputBufferSize))
+    outputBuffer.deallocate()
 }
 
 var audioConverterSettings = MyAudioConverterSettings()

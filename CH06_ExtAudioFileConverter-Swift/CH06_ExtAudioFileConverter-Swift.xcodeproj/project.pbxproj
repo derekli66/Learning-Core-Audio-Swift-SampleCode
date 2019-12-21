@@ -119,6 +119,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7174874C1EF0F0500074B663;
@@ -239,7 +240,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 453FTGY3Z2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -248,7 +249,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 453FTGY3Z2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
