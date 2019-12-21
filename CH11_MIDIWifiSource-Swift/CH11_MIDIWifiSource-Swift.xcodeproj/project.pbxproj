@@ -171,7 +171,7 @@
 				TargetAttributes = {
 					71F9C1D61ED23C37005BEC29 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 453FTGY3Z2;
+						DevelopmentTeam = 4Q53V76ARG;
 						ProvisioningStyle = Automatic;
 					};
 					71F9C1EA1ED23C37005BEC29 = {
@@ -187,6 +187,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -317,6 +318,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -359,6 +361,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -367,13 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 453FTGY3Z2;
+				DEVELOPMENT_TEAM = 4Q53V76ARG;
 				INFOPLIST_FILE = "CH11_MIDIWifiSource-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekli66.CH11-MIDIWifiSource-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -381,13 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 453FTGY3Z2;
+				DEVELOPMENT_TEAM = 4Q53V76ARG;
 				INFOPLIST_FILE = "CH11_MIDIWifiSource-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekli66.CH11-MIDIWifiSource-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -401,7 +404,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekli66.CH11-MIDIWifiSource-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CH11_MIDIWifiSource-Swift.app/CH11_MIDIWifiSource-Swift";
 			};
 			name = Debug;
@@ -416,7 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekli66.CH11-MIDIWifiSource-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CH11_MIDIWifiSource-Swift.app/CH11_MIDIWifiSource-Swift";
 			};
 			name = Release;
