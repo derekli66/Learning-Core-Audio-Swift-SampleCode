@@ -12,7 +12,7 @@ If you would like to share your Swift knowledge to make these sample code better
  
 ---
 
-The chapters were finished in Swift 3.
+The following chapters were finished in Swift. 
 
 * Chapter 3 - Audio Processing with Core Audio
 * Chapter 4 - Recording
@@ -26,3 +26,8 @@ The chapters were finished in Swift 3.
 * Chapter 12 - Coda (AUSampler)
 
 ---
+
+## Revision Notes
+
+### 2019/12/21
+* Update sample codes to support Swift 5.
