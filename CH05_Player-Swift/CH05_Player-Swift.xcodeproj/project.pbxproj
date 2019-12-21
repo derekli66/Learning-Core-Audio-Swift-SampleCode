@@ -119,6 +119,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 719518E91F016F640079FBF9;
@@ -239,7 +240,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = SKLFZ4533Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -248,7 +249,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = SKLFZ4533Y;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -271,6 +272,7 @@
 				719518FB1F016F640079FBF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

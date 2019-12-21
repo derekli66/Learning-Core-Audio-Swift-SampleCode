@@ -68,7 +68,7 @@ func MyCopyEncoderCookieToQueue(theFile: AudioFileID, queue: AudioQueueRef)
     
     if (result == noErr && propertySize > 0) {
         let alignment = MemoryLayout<UInt8>.alignment
-        var magicCookie: UnsafeMutableRawPointer = UnsafeMutableRawPointer.allocate(bytes: Int(propertySize), alignedTo: alignment)
+        var magicCookie: UnsafeMutableRawPointer = UnsafeMutableRawPointer.allocate(byteCount: Int(propertySize), alignment: alignment)
         CheckError(AudioFileGetProperty(theFile,
                              kAudioFilePropertyMagicCookieData,
                              &propertySize,
@@ -77,7 +77,7 @@ func MyCopyEncoderCookieToQueue(theFile: AudioFileID, queue: AudioQueueRef)
                               kAudioQueueProperty_MagicCookie,
                               magicCookie,
                               propertySize), "set cookie on queue failed")
-        magicCookie.deallocate(bytes: Int(propertySize), alignedTo: alignment)
+        magicCookie.deallocate()
     }
 }
 
