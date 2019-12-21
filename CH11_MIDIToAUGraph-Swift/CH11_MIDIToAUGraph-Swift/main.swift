@@ -42,14 +42,14 @@ let MyMIDIReadProc: MIDIReadProc = {
         return
     }
     
-    for idx in 0..<numPackets {
-        var midiStatus: Byte = packet.pointee.data.0
-        var midiCommand: Byte = midiStatus >> 4
+    for _ in 0..<numPackets {
+        let midiStatus: Byte = packet.pointee.data.0
+        let midiCommand: Byte = midiStatus >> 4
         
         // is it a note-on or note-off
         if (midiCommand == 0x09 || midiCommand == 0x08) {
-            var note: Byte = packet.pointee.data.1 & 0x7F
-            var velocity: Byte = packet.pointee.data.2 & 0x7F
+            let note: Byte = packet.pointee.data.1 & 0x7F
+            let velocity: Byte = packet.pointee.data.2 & 0x7F
             debugPrint("midiCommand=\(midiCommand). Note=\(note), Velocity=\(velocity)")
             
             // Send to augraph
@@ -119,6 +119,7 @@ let MyMIDINotifyProc: MIDINotifyProc = { (message: UnsafePointer<MIDINotificatio
         debugPrint("msgSerialPortOwnerChanged")
     case .msgIOError:
         debugPrint("msgIOError")
+    default: break
     }
 }
 

@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             debugPrint("Couldn't get outputPort and destinationEndPoint for sending MIDI event")
         }
         
-        packetListPtr.deallocate(capacity: 1)
+        packetListPtr.deallocate()
     }
     
     private func sendNoteOnEvent(_ key: Byte, velocity: Byte) -> Void

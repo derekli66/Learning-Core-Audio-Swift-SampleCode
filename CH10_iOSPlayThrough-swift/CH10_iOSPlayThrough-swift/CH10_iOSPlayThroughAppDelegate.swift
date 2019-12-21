@@ -85,7 +85,7 @@ private let InputModulatingRenderCallback: AURenderCallback = {
                 let framePtr = mData.advanced(by: Int(framePosition))
                 memcpy(&sample, framePtr, MemoryLayout<Int16>.size)
                 
-                let theta = effectState.sinePhase * M_PI * 2
+                let theta = effectState.sinePhase * Double.pi * 2
                 
                 sample = Int16(sin(theta) * Double(sample))
                 
@@ -109,12 +109,12 @@ class CH10_iOSPlayThroughAppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var effectState: EffectState = EffectState()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Set up audio session
         let audioSession = AVAudioSession.sharedInstance()
         do  {
             try audioSession.setActive(true)
-            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
         }
         catch {
             // Print error after an exception throws
@@ -125,9 +125,9 @@ class CH10_iOSPlayThroughAppDelegate: UIResponder, UIApplicationDelegate {
         if (!audioSession.isInputAvailable) {
             let alert: UIAlertController = UIAlertController(title: "No audio input",
                                                              message: "No audio input device is currently attached",
-                                                             preferredStyle: UIAlertControllerStyle.alert)
+                                                             preferredStyle: UIAlertController.Style.alert)
             let action: UIAlertAction = UIAlertAction(title: "OK",
-                                                      style: UIAlertActionStyle.default,
+                                                      style: UIAlertAction.Style.default,
                                                       handler: { (action: UIAlertAction) in })
             alert.addAction(action)
             self.window?.rootViewController?.present(alert, animated: true)

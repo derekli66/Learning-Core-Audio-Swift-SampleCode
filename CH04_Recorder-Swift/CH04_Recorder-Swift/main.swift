@@ -88,7 +88,9 @@ func MyGetDefaultInputDevicesSampleRate(_ outSampleRate: UnsafeMutablePointer<Fl
                                                      mScope: kAudioObjectPropertyScopeGlobal,
                                                      mElement: 0)
     var propertySize: UInt32 = MemoryLayout<AudioDeviceID>.size.toUInt32()
-    error = AudioHardwareServiceGetPropertyData(AudioObjectID(kAudioObjectSystemObject),
+    // Refer to: https://developer.apple.com/library/archive/technotes/tn2223/_index.html
+    // Refer to: https://stackoverflow.com/questions/37132958/audiohardwareservicegetpropertydata-deprecated
+    error = AudioObjectGetPropertyData(AudioObjectID(kAudioObjectSystemObject),
                                                 &propertyAddress,
                                                 0,
                                                 nil,
@@ -101,7 +103,7 @@ func MyGetDefaultInputDevicesSampleRate(_ outSampleRate: UnsafeMutablePointer<Fl
     propertyAddress.mScope = kAudioObjectPropertyScopeGlobal
     propertyAddress.mElement = 0
     propertySize = MemoryLayout<Float64>.size.toUInt32()
-    error = AudioHardwareServiceGetPropertyData(deviceID,
+    error = AudioObjectGetPropertyData(deviceID,
                                                 &propertyAddress,
                                                 0,
                                                 nil,
@@ -166,7 +168,7 @@ func MyCopyEncoderCookieToFile(_ queue: AudioQueueRef, _ theFile: AudioFileID) -
     if (noErr == result && propertySize > 0) {
         // there is valid cookie data to be fetched, get it.
         let magicCookie = UnsafeMutablePointer<UInt8>.allocate(capacity: propertySize.toInt())
-        magicCookie.initialize(to: 0, count: propertySize.toInt())
+        magicCookie.initialize(repeating: 0, count: propertySize.toInt())
         CheckError(AudioQueueGetProperty(queue,
                               kAudioQueueProperty_MagicCookie,
                               magicCookie,
@@ -178,7 +180,7 @@ func MyCopyEncoderCookieToFile(_ queue: AudioQueueRef, _ theFile: AudioFileID) -
                              propertySize,
                              magicCookie), "set audio file's magic cookie")
         magicCookie.deinitialize(count: propertySize.toInt())
-        magicCookie.deallocate(capacity: propertySize.toInt())
+        magicCookie.deallocate()
     }
 }
 

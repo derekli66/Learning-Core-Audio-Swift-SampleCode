@@ -27,7 +27,7 @@ func Convert(_ mySettings: inout MyAudioConverterSettings)
     
     // allocate destination buffer
     let outputBuffer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(outputBufferSize))
-    outputBuffer.initialize(to: 0, count: Int(outputBufferSize))
+    outputBuffer.initialize(repeating: 0, count: Int(outputBufferSize))
     
     var outputFilePacketPosition: UInt32 = 0 // in bytes
     
@@ -75,8 +75,8 @@ func Convert(_ mySettings: inout MyAudioConverterSettings)
         free(convertedData.unsafeMutablePointer)
     }
     
-    outputBuffer.deinitialize()
-    outputBuffer.deallocate(capacity: Int(packetsPerBuffer))
+    outputBuffer.deinitialize(count: Int(packetsPerBuffer))
+    outputBuffer.deallocate()
 }
 
 var audioConverterSettings = MyAudioConverterSettings()

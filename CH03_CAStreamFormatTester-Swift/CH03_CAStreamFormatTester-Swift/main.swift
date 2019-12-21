@@ -30,10 +30,10 @@ func main()
     assert(audioErr == noErr)
     
     let asbds = UnsafeMutablePointer<AudioStreamBasicDescription>.allocate(capacity: Int(infoSize))
-    asbds.initialize(to: AudioStreamBasicDescription(), count: Int(infoSize))
+    asbds.initialize(repeating: AudioStreamBasicDescription(), count: Int(infoSize))
     defer {
         asbds.deinitialize(count: Int(infoSize))
-        asbds.deallocate(capacity: Int(infoSize))
+        asbds.deallocate()
     }
     
     audioErr = AudioFileGetGlobalInfo(kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat,
