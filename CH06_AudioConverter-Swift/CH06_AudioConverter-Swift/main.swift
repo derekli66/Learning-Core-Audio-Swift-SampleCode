@@ -9,9 +9,12 @@
 import Foundation
 import AudioToolbox
 
+// Change the input file location to point to your source file.
 private let kInputFileLocation = "/Users/derekli/bitbucket/shape_of_you.mp3"
+// Change the output file location when needed.
+private let kOutputFileLocation = "output.aif"
 
-struct MyAudioConverterSettings
+class MyAudioConverterSettings
 {
     var inputFormat: AudioStreamBasicDescription = AudioStreamBasicDescription()
     var outputFormat: AudioStreamBasicDescription = AudioStreamBasicDescription()
@@ -41,7 +44,7 @@ let myAudioConverterCallback: AudioConverterComplexInputDataProc = {
     audioBufferListRef[0].mData = nil
     audioBufferListRef[0].mDataByteSize = 0
     
-    guard var audioConverterSettings = audioConverterSettingsRef?.pointee else {
+    guard let audioConverterSettings = audioConverterSettingsRef?.pointee else {
         return kAudioConverterErr_UnspecifiedError
     }
     
@@ -57,9 +60,8 @@ let myAudioConverterCallback: AudioConverterComplexInputDataProc = {
         audioConverterSettings.sourceBuffer = nil
     }
     
-    audioConverterSettings.sourceBuffer = calloc(1, Int(ioDataPacketCount.pointee * UInt32((audioConverterSettingsRef?.pointee.inputFilePacketMaxSize)!)))
-    
-    var outByteCount: UInt32 = 0
+    var outByteCount: UInt32 = ioDataPacketCount.pointee * UInt32(audioConverterSettings.inputFilePacketMaxSize)
+    audioConverterSettings.sourceBuffer = calloc(1, Int(outByteCount))
     var result = AudioFileReadPacketData(audioConverterSettings.inputFile!,
                                          true,
                                          &outByteCount,
@@ -141,7 +143,11 @@ func Convert(_ mySettings: inout MyAudioConverterSettings)
                                                               &ioOutputDataPackets,
                                                               convertedData.unsafeMutablePointer,
                                                               (mySettings.inputFilePacketDescriptions != nil) ? mySettings.inputFilePacketDescriptions : nil)
-        if (error != noErr || 0 == ioOutputDataPackets) {
+        if (-50 == error) {
+            debugPrint("Audio parameter error. Please check your argument when calling audio API.")
+            break
+        }
+        else if (error != noErr || 0 == ioOutputDataPackets) {
             break // this is out termination condition
         }
         
@@ -208,7 +214,8 @@ audioConverterSettings.outputFormat.mChannelsPerFrame = 2
 audioConverterSettings.outputFormat.mBitsPerChannel = 16
 
 // create output file
-let outputFileURL = URL(fileURLWithPath: "output.aif")
+// The output file extension must match to AudioFileTypeID in the seconad parameter
+let outputFileURL = URL(fileURLWithPath: kOutputFileLocation)
 CheckError(AudioFileCreateWithURL(outputFileURL as CFURL,
                        kAudioFileAIFFType,
                        &audioConverterSettings.outputFormat,
