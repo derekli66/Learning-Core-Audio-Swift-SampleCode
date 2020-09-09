@@ -154,7 +154,7 @@ func Convert(_ mySettings: inout MyAudioConverterSettings)
         // write the converted data to the output file
         CheckError(AudioFileWritePackets(mySettings.outputFile!,
                               false,
-                              ioOutputDataPackets,
+                              ioOutputDataPackets * mySettings.outputFormat.mBytesPerPacket,
                               nil,
                               Int64(outputFilePacketPosition / mySettings.outputFormat.mBytesPerPacket),
                               &ioOutputDataPackets,
