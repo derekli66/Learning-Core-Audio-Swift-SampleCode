@@ -9,57 +9,73 @@
 import Foundation
 import AudioToolbox
 
-func main()
-{
-    var fileTypeAndFormat = AudioFileTypeAndFormatID(mFileType: kAudioFileAIFFType,
-                                                     mFormatID: kAudioFormatLinearPCM)
+// Convert UInt32 (formats, file types) to string
+extension UInt32 {
+    func toString() -> String? {
+        var value = self
+        let data = Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main() {
+    // Setup the format query
+    var fileTypeAndFormat = AudioFileTypeAndFormatID(
+        mFileType: kAudioFileAIFFType,
+        mFormatID: kAudioFormatLinearPCM
+    )
     
-    var audioErr: OSStatus = noErr
-    var infoSize: UInt32   = 0
+    // Get the size needed for format descriptions
+    var infoSize: UInt32 = 0
+    var status = AudioFileGetGlobalInfoSize(
+        kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat,
+        UInt32(MemoryLayout.size(ofValue: fileTypeAndFormat)),
+        &fileTypeAndFormat,
+        &infoSize
+    )
     
-    audioErr = AudioFileGetGlobalInfoSize(kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat,
-                                          UInt32(MemoryLayout.size(ofValue: fileTypeAndFormat)),
-                                          &fileTypeAndFormat,
-                                          &infoSize)
-    
-    if (audioErr != noErr) {
-        let err4cc = CFSwapInt32HostToBig(UInt32(audioErr))
-        debugPrint("Error when getting size info: \(err4cc.toString()!)")
+    if status != noErr {
+        let err4cc = CFSwapInt32HostToBig(UInt32(status))
+        print("Error when getting size info: \(err4cc.toString() ?? String(status))")
+        return
     }
     
-    assert(audioErr == noErr)
+    // Calculate how many descriptions we'll get
+    let formatCount = Int(infoSize) / MemoryLayout<AudioStreamBasicDescription>.size
     
-    let asbds = UnsafeMutablePointer<AudioStreamBasicDescription>.allocate(capacity: Int(infoSize))
-    asbds.initialize(repeating: AudioStreamBasicDescription(), count: Int(infoSize))
+    // Allocate memory for the descriptions
+    let asbds = UnsafeMutablePointer<AudioStreamBasicDescription>.allocate(capacity: formatCount)
+    asbds.initialize(repeating: AudioStreamBasicDescription(), count: formatCount)
+    
     defer {
-        asbds.deinitialize(count: Int(infoSize))
+        asbds.deinitialize(count: formatCount)
         asbds.deallocate()
     }
     
-    audioErr = AudioFileGetGlobalInfo(kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat,
-                                      UInt32(MemoryLayout.size(ofValue: fileTypeAndFormat)),
-                                      &fileTypeAndFormat,
-                                      &infoSize,
-                                      asbds)
-    assert(audioErr == noErr)
+    // Get the actual format descriptions
+    status = AudioFileGetGlobalInfo(
+        kAudioFileGlobalInfo_AvailableStreamDescriptionsForFormat,
+        UInt32(MemoryLayout.size(ofValue: fileTypeAndFormat)),
+        &fileTypeAndFormat,
+        &infoSize,
+        asbds
+    )
     
-    let asbdCount = Int(infoSize) / MemoryLayout<AudioStreamBasicDescription>.size
-    for idx in 0..<asbdCount {
+    if status != noErr {
+        let err4cc = CFSwapInt32HostToBig(UInt32(status))
+        print("Error getting formats: \(err4cc.toString() ?? String(status))")
+        return
+    }
+    
+    // Print all formats
+    print("Available formats for AIFF/LinearPCM:")
+    print("-------------------------------------")
+    
+    for idx in 0..<formatCount {
         let format4cc = CFSwapInt32HostToBig(asbds[idx].mFormatID)
-        debugPrint("\(idx): mFormatId: \(format4cc.toString()!), mFormatFlags: \(asbds[idx].mFormatFlags), mBitsPerChannel: \(asbds[idx].mBitsPerChannel)")
+        print("\(idx): mFormatId: \(format4cc.toString()!), mFormatFlags: \(asbds[idx].mFormatFlags), mBitsPerChannel: \(asbds[idx].mBitsPerChannel)")
     }
 }
 
-extension UInt32
-{
-    func toString() -> String?
-    {
-        var value = self
-        let data = Data(bytes: &value, count: MemoryLayout.size(ofValue: value))
-        return String(data: data, encoding: String.Encoding.utf8)
-    }
-}
-
-// Perform main function
+// Run the program
 main()
-
